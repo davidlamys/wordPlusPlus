@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		030DA8F58D0A26C91604553C /* Pods_wordPlusPlusUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9482A73D3272ED5410263D /* Pods_wordPlusPlusUITests.framework */; };
 		151F385E1DA67FB200004ED8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F385D1DA67FB200004ED8 /* AppDelegate.swift */; };
-		151F38601DA67FB200004ED8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F385F1DA67FB200004ED8 /* ViewController.swift */; };
+		151F38601DA67FB200004ED8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F385F1DA67FB200004ED8 /* MainViewController.swift */; };
 		151F38631DA67FB200004ED8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151F38611DA67FB200004ED8 /* Main.storyboard */; };
 		151F38651DA67FB200004ED8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151F38641DA67FB200004ED8 /* Assets.xcassets */; };
 		151F38681DA67FB200004ED8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 151F38661DA67FB200004ED8 /* LaunchScreen.storyboard */; };
 		151F38731DA67FB200004ED8 /* wordPlusPlusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F38721DA67FB200004ED8 /* wordPlusPlusTests.swift */; };
 		151F387E1DA67FB200004ED8 /* wordPlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F387D1DA67FB200004ED8 /* wordPlusPlusUITests.swift */; };
+		151F388C1DA682DE00004ED8 /* positive-words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 151F388B1DA682DE00004ED8 /* positive-words.txt */; };
+		151F388E1DA682F400004ED8 /* TextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F388D1DA682F400004ED8 /* TextParser.swift */; };
+		15FCFFD21DAE7D9800B760A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */; };
+		15FCFFD41DAE8B4B00B760A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */; };
+		986FFF111842DCA899046E16 /* Pods_wordPlusPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1C400D18B9F2A0F768C61D /* Pods_wordPlusPlusTests.framework */; };
+		D5AC1287DACE6FDEE6EF7AFA /* Pods_wordPlusPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5518B2EA6ADD7762A96F43DB /* Pods_wordPlusPlus.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05D84381EF92706758988722 /* Pods-wordPlusPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlusTests/Pods-wordPlusPlusTests.release.xcconfig"; sourceTree = "<group>"; };
+		13698691CCF84327006D2D52 /* Pods-wordPlusPlus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlus/Pods-wordPlusPlus.debug.xcconfig"; sourceTree = "<group>"; };
 		151F385A1DA67FB200004ED8 /* wordPlusPlus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wordPlusPlus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		151F385D1DA67FB200004ED8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		151F385F1DA67FB200004ED8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		151F385F1DA67FB200004ED8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		151F38621DA67FB200004ED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		151F38641DA67FB200004ED8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		151F38671DA67FB200004ED8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,18 @@
 		151F38791DA67FB200004ED8 /* wordPlusPlusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wordPlusPlusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		151F387D1DA67FB200004ED8 /* wordPlusPlusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordPlusPlusUITests.swift; sourceTree = "<group>"; };
 		151F387F1DA67FB200004ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		151F388B1DA682DE00004ED8 /* positive-words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "positive-words.txt"; sourceTree = "<group>"; };
+		151F388D1DA682F400004ED8 /* TextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextParser.swift; sourceTree = "<group>"; };
+		15FCFFD01DAE7D9800B760A1 /* wordPlusPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wordPlusPlus.entitlements; sourceTree = "<group>"; };
+		15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2A9482A73D3272ED5410263D /* Pods_wordPlusPlusUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wordPlusPlusUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5518B2EA6ADD7762A96F43DB /* Pods_wordPlusPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wordPlusPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		994A128BCA17E84582705155 /* Pods-wordPlusPlusUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlusUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlusUITests/Pods-wordPlusPlusUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B3FF7BF8E1AE80958EE89E8B /* Pods-wordPlusPlusTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlusTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlusTests/Pods-wordPlusPlusTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB1C400D18B9F2A0F768C61D /* Pods_wordPlusPlusTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wordPlusPlusTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C453EACFADFBA3D6F0A1C2CD /* Pods-wordPlusPlus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlus.release.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlus/Pods-wordPlusPlus.release.xcconfig"; sourceTree = "<group>"; };
+		FE353B77CC27547D1C549DD3 /* Pods-wordPlusPlusUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlusUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlusUITests/Pods-wordPlusPlusUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5AC1287DACE6FDEE6EF7AFA /* Pods_wordPlusPlus.framework in Frameworks */,
+				15FCFFD21DAE7D9800B760A1 /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986FFF111842DCA899046E16 /* Pods_wordPlusPlusTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				030DA8F58D0A26C91604553C /* Pods_wordPlusPlusUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +106,9 @@
 				151F38711DA67FB200004ED8 /* wordPlusPlusTests */,
 				151F387C1DA67FB200004ED8 /* wordPlusPlusUITests */,
 				151F385B1DA67FB200004ED8 /* Products */,
+				151F388B1DA682DE00004ED8 /* positive-words.txt */,
+				2133D766A954CC20FE896F0F /* Pods */,
+				667717D683B5F10C0DA4457D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,8 +125,11 @@
 		151F385C1DA67FB200004ED8 /* wordPlusPlus */ = {
 			isa = PBXGroup;
 			children = (
+				15FCFFD01DAE7D9800B760A1 /* wordPlusPlus.entitlements */,
 				151F385D1DA67FB200004ED8 /* AppDelegate.swift */,
-				151F385F1DA67FB200004ED8 /* ViewController.swift */,
+				151F385F1DA67FB200004ED8 /* MainViewController.swift */,
+				15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */,
+				151F388D1DA682F400004ED8 /* TextParser.swift */,
 				151F38611DA67FB200004ED8 /* Main.storyboard */,
 				151F38641DA67FB200004ED8 /* Assets.xcassets */,
 				151F38661DA67FB200004ED8 /* LaunchScreen.storyboard */,
@@ -125,6 +156,30 @@
 			path = wordPlusPlusUITests;
 			sourceTree = "<group>";
 		};
+		2133D766A954CC20FE896F0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				13698691CCF84327006D2D52 /* Pods-wordPlusPlus.debug.xcconfig */,
+				C453EACFADFBA3D6F0A1C2CD /* Pods-wordPlusPlus.release.xcconfig */,
+				B3FF7BF8E1AE80958EE89E8B /* Pods-wordPlusPlusTests.debug.xcconfig */,
+				05D84381EF92706758988722 /* Pods-wordPlusPlusTests.release.xcconfig */,
+				994A128BCA17E84582705155 /* Pods-wordPlusPlusUITests.debug.xcconfig */,
+				FE353B77CC27547D1C549DD3 /* Pods-wordPlusPlusUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		667717D683B5F10C0DA4457D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */,
+				5518B2EA6ADD7762A96F43DB /* Pods_wordPlusPlus.framework */,
+				BB1C400D18B9F2A0F768C61D /* Pods_wordPlusPlusTests.framework */,
+				2A9482A73D3272ED5410263D /* Pods_wordPlusPlusUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +187,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 151F38821DA67FB200004ED8 /* Build configuration list for PBXNativeTarget "wordPlusPlus" */;
 			buildPhases = (
+				785EF71DE4C161FD571E83AD /* [CP] Check Pods Manifest.lock */,
 				151F38561DA67FB200004ED8 /* Sources */,
 				151F38571DA67FB200004ED8 /* Frameworks */,
 				151F38581DA67FB200004ED8 /* Resources */,
+				16DDC92B288E0345E424C108 /* [CP] Embed Pods Frameworks */,
+				A3F21380B432471D8F0BEE48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +207,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 151F38851DA67FB200004ED8 /* Build configuration list for PBXNativeTarget "wordPlusPlusTests" */;
 			buildPhases = (
+				117E923B6147AD011A971E7D /* [CP] Check Pods Manifest.lock */,
 				151F386A1DA67FB200004ED8 /* Sources */,
 				151F386B1DA67FB200004ED8 /* Frameworks */,
 				151F386C1DA67FB200004ED8 /* Resources */,
+				E865BC316531E05F9BF44879 /* [CP] Embed Pods Frameworks */,
+				F3E3B83BC2A05EEED8690574 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 151F38881DA67FB200004ED8 /* Build configuration list for PBXNativeTarget "wordPlusPlusUITests" */;
 			buildPhases = (
+				46C1E6AC24871B9F0631015D /* [CP] Check Pods Manifest.lock */,
 				151F38751DA67FB200004ED8 /* Sources */,
 				151F38761DA67FB200004ED8 /* Frameworks */,
 				151F38771DA67FB200004ED8 /* Resources */,
+				0952C9043947629A43959270 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,12 +251,21 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "David Lam";
 				TargetAttributes = {
 					151F38591DA67FB200004ED8 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 3UC52MR44U;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
 					};
 					151F386D1DA67FB200004ED8 = {
 						CreatedOnToolsVersion = 8.0;
@@ -235,6 +307,7 @@
 				151F38681DA67FB200004ED8 /* LaunchScreen.storyboard in Resources */,
 				151F38651DA67FB200004ED8 /* Assets.xcassets in Resources */,
 				151F38631DA67FB200004ED8 /* Main.storyboard in Resources */,
+				151F388C1DA682DE00004ED8 /* positive-words.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +327,138 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0952C9043947629A43959270 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wordPlusPlusUITests/Pods-wordPlusPlusUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		117E923B6147AD011A971E7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		16DDC92B288E0345E424C108 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wordPlusPlus/Pods-wordPlusPlus-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46C1E6AC24871B9F0631015D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		785EF71DE4C161FD571E83AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A3F21380B432471D8F0BEE48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wordPlusPlus/Pods-wordPlusPlus-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E865BC316531E05F9BF44879 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wordPlusPlusTests/Pods-wordPlusPlusTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3E3B83BC2A05EEED8690574 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wordPlusPlusTests/Pods-wordPlusPlusTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		151F38561DA67FB200004ED8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				151F38601DA67FB200004ED8 /* ViewController.swift in Sources */,
+				151F38601DA67FB200004ED8 /* MainViewController.swift in Sources */,
+				151F388E1DA682F400004ED8 /* TextParser.swift in Sources */,
 				151F385E1DA67FB200004ED8 /* AppDelegate.swift in Sources */,
+				15FCFFD41DAE8B4B00B760A1 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +531,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -382,6 +581,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -408,8 +608,12 @@
 		};
 		151F38831DA67FB200004ED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13698691CCF84327006D2D52 /* Pods-wordPlusPlus.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wordPlusPlus/wordPlusPlus.entitlements;
+				DEVELOPMENT_TEAM = 3UC52MR44U;
 				INFOPLIST_FILE = wordPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.happylab.wordPlusPlus;
@@ -420,8 +624,12 @@
 		};
 		151F38841DA67FB200004ED8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C453EACFADFBA3D6F0A1C2CD /* Pods-wordPlusPlus.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wordPlusPlus/wordPlusPlus.entitlements;
+				DEVELOPMENT_TEAM = 3UC52MR44U;
 				INFOPLIST_FILE = wordPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.happylab.wordPlusPlus;
@@ -432,6 +640,7 @@
 		};
 		151F38861DA67FB200004ED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3FF7BF8E1AE80958EE89E8B /* Pods-wordPlusPlusTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -446,6 +655,7 @@
 		};
 		151F38871DA67FB200004ED8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D84381EF92706758988722 /* Pods-wordPlusPlusTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -460,6 +670,7 @@
 		};
 		151F38891DA67FB200004ED8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 994A128BCA17E84582705155 /* Pods-wordPlusPlusUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = wordPlusPlusUITests/Info.plist;
@@ -473,6 +684,7 @@
 		};
 		151F388A1DA67FB200004ED8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE353B77CC27547D1C549DD3 /* Pods-wordPlusPlusUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = wordPlusPlusUITests/Info.plist;
@@ -503,6 +715,7 @@
 				151F38841DA67FB200004ED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		151F38851DA67FB200004ED8 /* Build configuration list for PBXNativeTarget "wordPlusPlusTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +724,7 @@
 				151F38871DA67FB200004ED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		151F38881DA67FB200004ED8 /* Build configuration list for PBXNativeTarget "wordPlusPlusUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +733,7 @@
 				151F388A1DA67FB200004ED8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

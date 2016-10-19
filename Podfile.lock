@@ -1,0 +1,36 @@
+PODS:
+  - DynamicColor (3.1.0)
+  - RandomColorSwift (1.0.0)
+  - RxCocoa (3.0.0-beta.2):
+    - RxSwift (~> 3.0.0-beta.2)
+  - RxSwift (3.0.0-beta.2)
+
+DEPENDENCIES:
+  - DynamicColor (~> 3.1.0)
+  - RandomColorSwift
+  - RxCocoa (from `https://github.com/ReactiveX/RxSwift`)
+  - RxSwift (from `https://github.com/ReactiveX/RxSwift`)
+
+EXTERNAL SOURCES:
+  RxCocoa:
+    :git: https://github.com/ReactiveX/RxSwift
+  RxSwift:
+    :git: https://github.com/ReactiveX/RxSwift
+
+CHECKOUT OPTIONS:
+  RxCocoa:
+    :commit: 984decb4745352fb1cbd6e94f7a445066774a240
+    :git: https://github.com/ReactiveX/RxSwift
+  RxSwift:
+    :commit: 984decb4745352fb1cbd6e94f7a445066774a240
+    :git: https://github.com/ReactiveX/RxSwift
+
+SPEC CHECKSUMS:
+  DynamicColor: 4dec283a881f7f9d9f3bc88fb5f306724242575f
+  RandomColorSwift: 9f85058b721665d52d239ca166a913e083506444
+  RxCocoa: 1dd105d8a4e18034ccd7bd6d136445363ce67c8e
+  RxSwift: 0ea939d7d97cb70657190ffde8dc2a9b455778fc
+
+PODFILE CHECKSUM: 81fe56697b4385b369b6a7d9a58263df5e3f86d7
+
+COCOAPODS: 1.0.1
