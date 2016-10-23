@@ -7,98 +7,46 @@
 //
 
 import UIKit
-import AVFoundation
 import RandomColorSwift
+import AVFoundation
 import DynamicColor
 import RxSwift
 import RxCocoa
 
-enum PlayState {
-    case play
-    case pause
-}
 
-enum PlayMode {
-    case repeatAll
-    case repeatOne
-    case shuffle
-    
-    mutating func toggle() {
-        switch self {
-        case .repeatAll:
-            self = .repeatOne
-        case .repeatOne:
-            self = .shuffle
-        case .shuffle:
-            self = .repeatAll
-        }
-    }
-    
-    func iconForState() -> UIImage? {
-        switch self {
-        case .repeatAll:
-            return #imageLiteral(resourceName: "ic_play_arrow")
-        case .repeatOne:
-            return #imageLiteral(resourceName: "ic_repeat_one")
-        case .shuffle:
-            return #imageLiteral(resourceName: "ic_shuffle")
-        }
-    }
-}
-
-struct ViewModel {
-    
-    var playState: PlayState = .pause
-    var playMode: PlayMode = .repeatAll
-    
-    var indexForWord = 0
- 
-}
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var volumeControlSlider: UISlider!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
     @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
-    let words =  TextParser.parseText()
     
-    func myFrom<E>(sequence: [E]) -> Observable<E> {
-        return Observable.create { observer in
-            for element in sequence {
-                observer.on(.next(element))
-            }
-            
-            observer.on(.completed)
-            return Disposables.create()
-        }
-    }
-    
-    
-    
-    let speechSynthesizer = AVSpeechSynthesizer()
-    
-    var currentWord : String = "" {
-        didSet {
-            let speechUtterance = AVSpeechUtterance(string: currentWord)
-//            speechUtterance.voice = AVSpeechVoice()
-            speechSynthesizer.speak(speechUtterance)
-            textLabel.text = currentWord
-            let newColor = randomColor(luminosity: Luminosity.bright)
-            textLabel.textColor = newColor
-            self.view.backgroundColor = newColor.complemented()
-        }
-    }
+    let disposeBag = DisposeBag()
 
-    var viewModel = ViewModel()
+    var viewModel = PlayerViewModel()
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        speechSynthesizer.delegate = self
+        viewModel.speechSynthesizer.delegate = self
         
         setupAudioSession()
         setupGestureRecognizer()
         textLabel.text = "Tap to start"
-        speechSynthesizer.continueSpeaking()
+        viewModel.speechSynthesizer.continueSpeaking()
+        
+        _ = volumeControlSlider.rx.value.asControlProperty()
+        .subscribe(onNext: { (sliderValue) in
+            self.viewModel.volume = sliderValue
+        }).addDisposableTo(self.disposeBag)
+        
+        _ = viewModel.currentWordSignal.subscribe(onNext: { (newWord) in
+            let newColor = randomColor(luminosity: Luminosity.bright)
+            self.textLabel.textColor = newColor
+            self.view.backgroundColor = newColor.complemented()
+            
+            self.textLabel.text = newWord
+        })
         
     }
     
@@ -112,33 +60,12 @@ class MainViewController: UIViewController {
         }
     }
     
-    fileprivate func createStreamFromWords() -> Observable<String> {
-        return Observable.create { observer in
-            for word in self.words {
-                observer.on(.next(word))
-            }
-            observer.on(.completed)
-            return Disposables.create()
-        }
-    }
-    
     fileprivate func setupGestureRecognizer() {
         tapGestureRecognizer.addTarget(self, action: #selector(self.updatePlayState))
         swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.up
         swipeGestureRecognizer.addTarget(self, action: #selector(self.didRecieveSwipe(gestRecognizer:)))
     }
     
-    func updatePlayState() {
-        switch viewModel.playState {
-        case .play:
-            viewModel.playState = .pause
-            textLabel.text = "Tap to resume"
-        case .pause:
-            viewModel.playState = .play
-            currentWord = words[viewModel.indexForWord]
-        }
-    }
-
     func didRecieveSwipe(gestRecognizer: UISwipeGestureRecognizer) {
         switch gestRecognizer.direction {
         case UISwipeGestureRecognizerDirection.left:
@@ -156,15 +83,14 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func nextWord() {
-        guard viewModel.playState == .play else {
-            return
+    func updatePlayState() {
+        self.viewModel.updatePlayState()
+        switch self.viewModel.playState {
+        case .play:
+            break
+        case .pause:
+            textLabel.text = "Tap to resume"
         }
-        viewModel.indexForWord = viewModel.indexForWord + 1
-        if viewModel.indexForWord > words.count {
-            viewModel.indexForWord = 0
-        }
-        currentWord = words[viewModel.indexForWord]
 
     }
 
@@ -174,7 +100,6 @@ class MainViewController: UIViewController {
 
 extension MainViewController: AVSpeechSynthesizerDelegate {
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-        nextWord()
+        viewModel.nextWord()
     }
 }
-

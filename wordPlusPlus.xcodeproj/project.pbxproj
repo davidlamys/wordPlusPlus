@@ -17,6 +17,7 @@
 		151F387E1DA67FB200004ED8 /* wordPlusPlusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F387D1DA67FB200004ED8 /* wordPlusPlusUITests.swift */; };
 		151F388C1DA682DE00004ED8 /* positive-words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 151F388B1DA682DE00004ED8 /* positive-words.txt */; };
 		151F388E1DA682F400004ED8 /* TextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F388D1DA682F400004ED8 /* TextParser.swift */; };
+		155AD5A21DBCC3F800AC9E91 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD5A11DBCC3F800AC9E91 /* PlayerViewModel.swift */; };
 		15FCFFD21DAE7D9800B760A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */; };
 		15FCFFD41DAE8B4B00B760A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */; };
 		986FFF111842DCA899046E16 /* Pods_wordPlusPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1C400D18B9F2A0F768C61D /* Pods_wordPlusPlusTests.framework */; };
@@ -58,6 +59,7 @@
 		151F387F1DA67FB200004ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151F388B1DA682DE00004ED8 /* positive-words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "positive-words.txt"; sourceTree = "<group>"; };
 		151F388D1DA682F400004ED8 /* TextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextParser.swift; sourceTree = "<group>"; };
+		155AD5A11DBCC3F800AC9E91 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
 		15FCFFD01DAE7D9800B760A1 /* wordPlusPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wordPlusPlus.entitlements; sourceTree = "<group>"; };
 		15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				151F385D1DA67FB200004ED8 /* AppDelegate.swift */,
 				151F385F1DA67FB200004ED8 /* MainViewController.swift */,
 				15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */,
+				155AD5A11DBCC3F800AC9E91 /* PlayerViewModel.swift */,
 				151F388D1DA682F400004ED8 /* TextParser.swift */,
 				151F38611DA67FB200004ED8 /* Main.storyboard */,
 				151F38641DA67FB200004ED8 /* Assets.xcassets */,
@@ -456,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				151F38601DA67FB200004ED8 /* MainViewController.swift in Sources */,
+				155AD5A21DBCC3F800AC9E91 /* PlayerViewModel.swift in Sources */,
 				151F388E1DA682F400004ED8 /* TextParser.swift in Sources */,
 				151F385E1DA67FB200004ED8 /* AppDelegate.swift in Sources */,
 				15FCFFD41DAE8B4B00B760A1 /* SettingsViewController.swift in Sources */,
