@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11523"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,46 +30,59 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lS-kb-oAL">
-                                <rect key="frame" x="601" y="325" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5U6-Dy-J5y">
+                                <rect key="frame" x="28" y="20" width="611" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANw-PI-p1h">
+                                <rect key="frame" x="306.5" y="295" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="8lG-t6-hsi"/>
+                                    <constraint firstAttribute="width" secondItem="ANw-PI-p1h" secondAttribute="height" multiplier="1:1" id="TpK-cR-bvD"/>
+                                </constraints>
+                                <state key="normal" image="ic_play_arrow"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lS-kb-oAL">
+                                <rect key="frame" x="595" y="303" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="I3Q-kS-Eaq"/>
+                                    <constraint firstAttribute="width" secondItem="1lS-kb-oAL" secondAttribute="height" multiplier="1:1" id="k22-zj-Lka"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="gear"/>
                                 <connections>
                                     <segue destination="m3b-Cc-8ba" kind="presentation" id="EBZ-g7-cKh"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5U6-Dy-J5y">
-                                <rect key="frame" x="28" y="20" width="611" height="31"/>
-                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bvC-ee-xCS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.66" constant="1" id="Bun-r5-g9b"/>
                             <constraint firstItem="5U6-Dy-J5y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="CNy-m1-5D3"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ANw-PI-p1h" secondAttribute="bottom" constant="25" id="Oc7-ZK-xbx"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5U6-Dy-J5y" secondAttribute="trailing" constant="10" id="PhQ-IS-Vwm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1lS-kb-oAL" secondAttribute="bottom" constant="20" id="WZI-Pi-VAt"/>
                             <constraint firstItem="bvC-ee-xCS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xmb-aR-Lrs"/>
                             <constraint firstItem="bvC-ee-xCS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="aRI-sd-fWq"/>
                             <constraint firstItem="bvC-ee-xCS" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.66" id="cGS-lM-Mzb"/>
+                            <constraint firstItem="ANw-PI-p1h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tZe-jO-Ax5"/>
+                            <constraint firstItem="1lS-kb-oAL" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vMG-Xd-XQV"/>
                             <constraint firstItem="5U6-Dy-J5y" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zSa-6H-lCL"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="qJT-jk-DV6" appends="YES" id="z07-9j-G0g"/>
                             <outletCollection property="gestureRecognizers" destination="bR9-dW-T7m" appends="YES" id="lFW-bp-4Q9"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="playButton" destination="ANw-PI-p1h" id="ZlK-yo-TD8"/>
                         <outlet property="swipeGestureRecognizer" destination="bR9-dW-T7m" id="paw-gV-esX"/>
-                        <outlet property="tapGestureRecognizer" destination="qJT-jk-DV6" id="NCS-51-erC"/>
                         <outlet property="textLabel" destination="bvC-ee-xCS" id="nw3-zU-vbS"/>
                         <outlet property="volumeControlSlider" destination="5U6-Dy-J5y" id="4ms-3g-QyL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="qJT-jk-DV6"/>
                 <swipeGestureRecognizer direction="right" id="bR9-dW-T7m"/>
             </objects>
-            <point key="canvasLocation" x="118.29085457271366" y="124"/>
+            <point key="canvasLocation" x="67" y="150"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="fXz-fG-KGY">
@@ -102,4 +116,8 @@
             <point key="canvasLocation" x="851" y="124"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" width="128" height="128"/>
+        <image name="ic_play_arrow" width="24" height="24"/>
+    </resources>
 </document>

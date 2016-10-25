@@ -15,6 +15,15 @@ import RxCocoa
 enum PlayState {
     case play
     case pause
+    
+    func iconForState() -> UIImage? {
+        switch self {
+        case .play:
+            return #imageLiteral(resourceName: "Icon-60")
+        case .pause:
+            return #imageLiteral(resourceName: "ic_play_arrow")
+        }
+    }
 }
 
 enum PlayMode {
@@ -33,7 +42,7 @@ enum PlayMode {
         }
     }
     
-    func iconForState() -> UIImage? {
+    func iconForMode() -> UIImage? {
         switch self {
         case .repeatAll:
             return #imageLiteral(resourceName: "ic_play_arrow")
@@ -51,7 +60,7 @@ struct PlayerViewModel {
     var playMode: PlayMode = .repeatAll
     
     var indexForWord = 0
-    var volume : Float = 1.0
+    var volume : Float = 0.25
     
     let words =  TextParser.parseText()
     
@@ -75,6 +84,15 @@ struct PlayerViewModel {
             speechUtterance.volume = volume
             speechSynthesizer.speak(speechUtterance)
             currentWordSignal.onNext(currentWord)
+            
+            let sharedDefaults = UserDefaults(suiteName: "group.WordPlusPlusExtensionSharingDefaults")
+
+            dump(sharedDefaults?.string(forKey: "currentWord"))
+            sharedDefaults?.set(currentWord, forKey: "currentWord")
+//            sharedDefaults?.set(currentWord, forKey: "currentWord")
+            sharedDefaults?.synchronize()
+            
+            dump(sharedDefaults?.string(forKey: "currentWord"))
         }
     }
     

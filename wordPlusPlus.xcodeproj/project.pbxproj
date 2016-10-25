@@ -18,6 +18,10 @@
 		151F388C1DA682DE00004ED8 /* positive-words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 151F388B1DA682DE00004ED8 /* positive-words.txt */; };
 		151F388E1DA682F400004ED8 /* TextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F388D1DA682F400004ED8 /* TextParser.swift */; };
 		155AD5A21DBCC3F800AC9E91 /* PlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD5A11DBCC3F800AC9E91 /* PlayerViewModel.swift */; };
+		155AD5A91DBE903700AC9E91 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 155AD5A81DBE903700AC9E91 /* NotificationCenter.framework */; };
+		155AD5AC1DBE903700AC9E91 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155AD5AB1DBE903700AC9E91 /* TodayViewController.swift */; };
+		155AD5AF1DBE903700AC9E91 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 155AD5AD1DBE903700AC9E91 /* MainInterface.storyboard */; };
+		155AD5B31DBE903700AC9E91 /* Play widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 155AD5A71DBE903700AC9E91 /* Play widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		15FCFFD21DAE7D9800B760A1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */; };
 		15FCFFD41DAE8B4B00B760A1 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */; };
 		986FFF111842DCA899046E16 /* Pods_wordPlusPlusTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1C400D18B9F2A0F768C61D /* Pods_wordPlusPlusTests.framework */; };
@@ -39,7 +43,28 @@
 			remoteGlobalIDString = 151F38591DA67FB200004ED8;
 			remoteInfo = wordPlusPlus;
 		};
+		155AD5B11DBE903700AC9E91 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 151F38521DA67FB200004ED8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 155AD5A61DBE903600AC9E91;
+			remoteInfo = "Play widget";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		155AD5B71DBE903700AC9E91 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				155AD5B31DBE903700AC9E91 /* Play widget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		05D84381EF92706758988722 /* Pods-wordPlusPlusTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wordPlusPlusTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wordPlusPlusTests/Pods-wordPlusPlusTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -59,7 +84,13 @@
 		151F387F1DA67FB200004ED8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		151F388B1DA682DE00004ED8 /* positive-words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "positive-words.txt"; sourceTree = "<group>"; };
 		151F388D1DA682F400004ED8 /* TextParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextParser.swift; sourceTree = "<group>"; };
+		152A072C1DBF8CBD0030FB27 /* Play widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Play widget.entitlements"; sourceTree = "<group>"; };
 		155AD5A11DBCC3F800AC9E91 /* PlayerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerViewModel.swift; sourceTree = "<group>"; };
+		155AD5A71DBE903700AC9E91 /* Play widget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Play widget.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		155AD5A81DBE903700AC9E91 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		155AD5AB1DBE903700AC9E91 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		155AD5AE1DBE903700AC9E91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		155AD5B01DBE903700AC9E91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15FCFFD01DAE7D9800B760A1 /* wordPlusPlus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wordPlusPlus.entitlements; sourceTree = "<group>"; };
 		15FCFFD11DAE7D9800B760A1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		15FCFFD31DAE8B4B00B760A1 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -98,6 +129,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		155AD5A41DBE903600AC9E91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155AD5A91DBE903700AC9E91 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -107,6 +146,7 @@
 				151F385C1DA67FB200004ED8 /* wordPlusPlus */,
 				151F38711DA67FB200004ED8 /* wordPlusPlusTests */,
 				151F387C1DA67FB200004ED8 /* wordPlusPlusUITests */,
+				155AD5AA1DBE903700AC9E91 /* Play widget */,
 				151F385B1DA67FB200004ED8 /* Products */,
 				151F388B1DA682DE00004ED8 /* positive-words.txt */,
 				2133D766A954CC20FE896F0F /* Pods */,
@@ -120,6 +160,7 @@
 				151F385A1DA67FB200004ED8 /* wordPlusPlus.app */,
 				151F386E1DA67FB200004ED8 /* wordPlusPlusTests.xctest */,
 				151F38791DA67FB200004ED8 /* wordPlusPlusUITests.xctest */,
+				155AD5A71DBE903700AC9E91 /* Play widget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +200,17 @@
 			path = wordPlusPlusUITests;
 			sourceTree = "<group>";
 		};
+		155AD5AA1DBE903700AC9E91 /* Play widget */ = {
+			isa = PBXGroup;
+			children = (
+				152A072C1DBF8CBD0030FB27 /* Play widget.entitlements */,
+				155AD5AB1DBE903700AC9E91 /* TodayViewController.swift */,
+				155AD5AD1DBE903700AC9E91 /* MainInterface.storyboard */,
+				155AD5B01DBE903700AC9E91 /* Info.plist */,
+			);
+			path = "Play widget";
+			sourceTree = "<group>";
+		};
 		2133D766A954CC20FE896F0F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +231,7 @@
 				5518B2EA6ADD7762A96F43DB /* Pods_wordPlusPlus.framework */,
 				BB1C400D18B9F2A0F768C61D /* Pods_wordPlusPlusTests.framework */,
 				2A9482A73D3272ED5410263D /* Pods_wordPlusPlusUITests.framework */,
+				155AD5A81DBE903700AC9E91 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -196,10 +249,12 @@
 				151F38581DA67FB200004ED8 /* Resources */,
 				16DDC92B288E0345E424C108 /* [CP] Embed Pods Frameworks */,
 				A3F21380B432471D8F0BEE48 /* [CP] Copy Pods Resources */,
+				155AD5B71DBE903700AC9E91 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				155AD5B21DBE903700AC9E91 /* PBXTargetDependency */,
 			);
 			name = wordPlusPlus;
 			productName = wordPlusPlus;
@@ -247,13 +302,30 @@
 			productReference = 151F38791DA67FB200004ED8 /* wordPlusPlusUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		155AD5A61DBE903600AC9E91 /* Play widget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 155AD5B41DBE903700AC9E91 /* Build configuration list for PBXNativeTarget "Play widget" */;
+			buildPhases = (
+				155AD5A31DBE903600AC9E91 /* Sources */,
+				155AD5A41DBE903600AC9E91 /* Frameworks */,
+				155AD5A51DBE903600AC9E91 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Play widget";
+			productName = "Play widget";
+			productReference = 155AD5A71DBE903700AC9E91 /* Play widget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		151F38521DA67FB200004ED8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 0810;
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "David Lam";
 				TargetAttributes = {
@@ -262,6 +334,9 @@
 						DevelopmentTeam = 3UC52MR44U;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
@@ -279,6 +354,16 @@
 						CreatedOnToolsVersion = 8.0;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 151F38591DA67FB200004ED8;
+					};
+					155AD5A61DBE903600AC9E91 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 3UC52MR44U;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -298,6 +383,7 @@
 				151F38591DA67FB200004ED8 /* wordPlusPlus */,
 				151F386D1DA67FB200004ED8 /* wordPlusPlusTests */,
 				151F38781DA67FB200004ED8 /* wordPlusPlusUITests */,
+				155AD5A61DBE903600AC9E91 /* Play widget */,
 			);
 		};
 /* End PBXProject section */
@@ -325,6 +411,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		155AD5A51DBE903600AC9E91 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155AD5AF1DBE903700AC9E91 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -482,6 +576,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		155AD5A31DBE903600AC9E91 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				155AD5AC1DBE903700AC9E91 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -494,6 +596,11 @@
 			isa = PBXTargetDependency;
 			target = 151F38591DA67FB200004ED8 /* wordPlusPlus */;
 			targetProxy = 151F387A1DA67FB200004ED8 /* PBXContainerItemProxy */;
+		};
+		155AD5B21DBE903700AC9E91 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 155AD5A61DBE903600AC9E91 /* Play widget */;
+			targetProxy = 155AD5B11DBE903700AC9E91 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -512,6 +619,14 @@
 				151F38671DA67FB200004ED8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		155AD5AD1DBE903700AC9E91 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				155AD5AE1DBE903700AC9E91 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -617,6 +732,8 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = wordPlusPlus/wordPlusPlus.entitlements;
+				"DEBUG_INFORMATION_FORMAT[sdk=iphoneos*]" = dwarf;
+				"DEBUG_INFORMATION_FORMAT[sdk=iphonesimulator*]" = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 3UC52MR44U;
 				INFOPLIST_FILE = wordPlusPlus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -700,6 +817,36 @@
 			};
 			name = Release;
 		};
+		155AD5B51DBE903700AC9E91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Play widget/Play widget.entitlements";
+				DEVELOPMENT_TEAM = 3UC52MR44U;
+				INFOPLIST_FILE = "Play widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happylab.wordPlusPlus.Play-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		155AD5B61DBE903700AC9E91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Play widget/Play widget.entitlements";
+				DEVELOPMENT_TEAM = 3UC52MR44U;
+				INFOPLIST_FILE = "Play widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.happylab.wordPlusPlus.Play-widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -735,6 +882,15 @@
 			buildConfigurations = (
 				151F38891DA67FB200004ED8 /* Debug */,
 				151F388A1DA67FB200004ED8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		155AD5B41DBE903700AC9E91 /* Build configuration list for PBXNativeTarget "Play widget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				155AD5B51DBE903700AC9E91 /* Debug */,
+				155AD5B61DBE903700AC9E91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

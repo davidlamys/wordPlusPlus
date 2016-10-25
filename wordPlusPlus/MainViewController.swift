@@ -20,7 +20,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var volumeControlSlider: UISlider!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet var swipeGestureRecognizer: UISwipeGestureRecognizer!
-    @IBOutlet var tapGestureRecognizer: UITapGestureRecognizer!
+    @IBOutlet weak var playButton: UIButton!
     
     let disposeBag = DisposeBag()
 
@@ -31,8 +31,7 @@ class MainViewController: UIViewController {
         viewModel.speechSynthesizer.delegate = self
         
         setupAudioSession()
-        setupGestureRecognizer()
-        textLabel.text = "Tap to start"
+        textLabel.text = "Press play to start"
         viewModel.speechSynthesizer.continueSpeaking()
         
         _ = volumeControlSlider.rx.value.asControlProperty()
@@ -44,8 +43,15 @@ class MainViewController: UIViewController {
             let newColor = randomColor(luminosity: Luminosity.bright)
             self.textLabel.textColor = newColor
             self.view.backgroundColor = newColor.complemented()
-            
             self.textLabel.text = newWord
+        })
+        
+        _ = playButton.rx.controlEvent(.touchUpInside).asControlEvent()
+        .throttle(0.1, scheduler: MainScheduler.instance)
+        .subscribe({ _ in
+            self.updatePlayState()
+            let imageForState = self.viewModel.playState.iconForState()
+            self.playButton.setImage(imageForState, for: UIControlState.normal)
         })
         
     }
@@ -60,23 +66,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    fileprivate func setupGestureRecognizer() {
-        tapGestureRecognizer.addTarget(self, action: #selector(self.updatePlayState))
-        swipeGestureRecognizer.direction = UISwipeGestureRecognizerDirection.up
-        swipeGestureRecognizer.addTarget(self, action: #selector(self.didRecieveSwipe(gestRecognizer:)))
-    }
-    
-    func didRecieveSwipe(gestRecognizer: UISwipeGestureRecognizer) {
-        switch gestRecognizer.direction {
-        case UISwipeGestureRecognizerDirection.left:
-            NSLog("to the left")
-        case UISwipeGestureRecognizerDirection.right:
-            NSLog("to the right")
-        default:
-            NSLog("i don't really care")
-            
-        }
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -89,7 +78,7 @@ class MainViewController: UIViewController {
         case .play:
             break
         case .pause:
-            textLabel.text = "Tap to resume"
+            textLabel.text = "Paused"
         }
 
     }

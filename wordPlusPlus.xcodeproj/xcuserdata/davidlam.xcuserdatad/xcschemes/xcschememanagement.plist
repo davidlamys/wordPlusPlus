@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Play widget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>wordPlusPlus.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,11 @@
 			<true/>
 		</dict>
 		<key>151F38781DA67FB200004ED8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>155AD5A61DBE903600AC9E91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
