@@ -11,6 +11,14 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
+    @IBAction func butotnDidPressed(_ sender: Any) {
+        dump("yolo")
+        guard let sharedDefaults = UserDefaults(suiteName: "group.WordPlusPlusExtensionSharingDefaults") else {
+            return
+        }
+        let isPlaying = sharedDefaults.bool(forKey: "isPlaying")
+        sharedDefaults.set(!isPlaying, forKey: "isPlaying")
+    }
     
     @IBOutlet weak var wordLabel: UILabel!
      var taskManager = Timer()

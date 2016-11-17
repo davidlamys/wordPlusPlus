@@ -52,8 +52,46 @@ class MainViewController: UIViewController {
             self.updatePlayState()
             let imageForState = self.viewModel.playState.iconForState()
             self.playButton.setImage(imageForState, for: UIControlState.normal)
+            let isPlaying = (self.viewModel.playState == .play)
+            guard let sharedDefaults = UserDefaults(suiteName: "group.WordPlusPlusExtensionSharingDefaults") else {
+                return
+            }
+
+            sharedDefaults.set(isPlaying, forKey: "isPlaying")
         })
         
+        setUserDefaultsListener()
+    }
+    
+    func setUserDefaultsListener(){
+        guard let sharedDefaults = UserDefaults(suiteName: "group.WordPlusPlusExtensionSharingDefaults") else {
+            return
+        }
+        sharedDefaults.addObserver(self, forKeyPath: "isPlaying", options: NSKeyValueObservingOptions.new, context: nil)
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "isPlaying" {
+
+            dump("i'm here baby")
+            guard let sharedDefaults = UserDefaults(suiteName: "group.WordPlusPlusExtensionSharingDefaults") else {
+                return
+            }
+            let viewControllerPlaying = viewModel.playState == .play
+            let isPlaying = sharedDefaults.bool(forKey: "isPlaying")
+            if isPlaying != viewControllerPlaying {
+                    self.updatePlayState()
+                    let imageForState = self.viewModel.playState.iconForState()
+                    self.playButton.setImage(imageForState, for: UIControlState.normal)
+            }
+        }
+    }
+    
+    deinit {
+        guard let sharedDefaults = UserDefaults(suiteName: "group.WordPlusPlusExtensionSharingDefaults") else {
+            return
+        }
+        sharedDefaults.removeObserver(self, forKeyPath: "isPlaying")
     }
     
     fileprivate func setupAudioSession() {
@@ -80,7 +118,6 @@ class MainViewController: UIViewController {
         case .pause:
             textLabel.text = "Paused"
         }
-
     }
 
 }

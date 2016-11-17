@@ -89,7 +89,6 @@ struct PlayerViewModel {
 
             dump(sharedDefaults?.string(forKey: "currentWord"))
             sharedDefaults?.set(currentWord, forKey: "currentWord")
-//            sharedDefaults?.set(currentWord, forKey: "currentWord")
             sharedDefaults?.synchronize()
             
             dump(sharedDefaults?.string(forKey: "currentWord"))
